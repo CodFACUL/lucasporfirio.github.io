@@ -1,0 +1,9 @@
+a:visited {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+}
+a:link {
+    color: red;
+}
