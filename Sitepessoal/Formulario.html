@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="SitePessoal.css">
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a class="home" href="SitePessoal.html">Home</a></li>
+            <li><a class="curriculo" href="Currículo-Lucas Porfírio.pdf">Currículo</a></li>
+            <li><a class="formulario" href="Formulario.html">Formulário</a></li>
+            <li><a class="produtos" href="#">Produtos</a></li>
+            </ul>
+
+    </nav>
+    <form >
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="usuario_nome" />
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="usuario_email" />
+        </div>
+        <div>
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg" name="usuario_msg"></textarea>
+        </div>
+        
+        <div class="button">
+            <button type="submit">Enviar sua mensagem</button>
+        </div>
+    </form>
+</body>
+</html>

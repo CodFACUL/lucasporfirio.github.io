@@ -1,0 +1,278 @@
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+h1{
+	text-align: center;
+	background-color: #009E2D;
+	color: #f4f4f4;
+	padding: 50px;
+	border-bottom: solid 1px #f4f4f4;
+	font-size: 50px;
+    line-height: 42px;
+    font-family: Arial;
+    font-weight: 900;
+}
+body{
+	background-color:#616060;
+}
+div{
+	background-color:#222;
+	margin-left: 5%;
+	margin-right: 5%; 
+	border-left: solid 1px #f4f4f4;
+	border-right: solid 1px #f4f4f4;
+	text-align: center;
+}
+h2{
+	text-align: center;
+	background-color: #009E2D;
+	color:#f4f4f4;
+	height: auto;
+	max-height: 150px;
+	padding: 5% 3.57%;
+	margin: 5% 3.57%;
+	overflow:hidden;
+	font-size: 40px;
+    line-height: 42px;
+    font-family: Arial;
+    font-weight: 900;
+
+}
+p{
+	text-align: justify;
+	margin: 50px 125px  50px 125px;
+	background-color: #222;
+	color: #f4f4f4;
+	padding: 0px 0px 30px 0px;
+	font-size: 30px;
+}
+#robos1,#robos2,#robos3,#robos4 {
+	text-align: center;
+	background-color: #009E2D;
+	color:#f4f4f4;
+	height: auto;
+	max-height: 150px;
+	padding: 10px;
+	margin: 50px;
+	overflow:hidden;
+	font-size: 16px;
+    line-height: 42px;
+    font-family: Arial;
+    font-weight: 900;
+
+}
+img{
+	width: 100%;
+
+}
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 10px; 
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+
+.iframe-container-4x3 {
+  padding-top: 75%;
+}
+.menu{
+
+	width: 100%;
+	height: 50px;
+	background-color: #222;
+	font-family: Arial;
+
+	
+	
+}
+.menu ul{
+	list-style: none;
+	position: relative;
+}
+
+.menu ul li{
+	width: 100%;
+	float: left;
+}
+.menu a{
+	padding: 15px;
+	display:block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 100;
+}
+.menu ul ul {
+	position: static;
+	visibility: hidden;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s;
+}
+.menu ul li:hover ul{
+	visibility: visible;
+}
+.menu a:hover{
+	background-color: #f4f4f4;
+	color: #555;
+}
+.menu ul ul li{
+	float: none;
+	border-bottom: solid 1px #ccc;
+}
+.menu ul ul li a{
+	background-color: #009E2D;
+
+}
+.menu ul li:hover ul{
+	height: auto;
+	max-height: 200px;
+}
+.cadastro h2{
+	border-radius: 10px;
+}
+.cadastro {
+	text-align: left;
+	color: #fff;
+	
+}
+.cadastro label{
+	padding: 5px;
+}
+.cadastro input{
+	padding: 5px;
+	width: 200px;
+	display: block;
+	background-color: #C2F6B6;
+}
+.botao:hover{
+	background-color: #009E2D;
+
+}
+#GET-fem, #GET-masc{
+	width: 10%;
+	float:left;
+}
+
+
+footer {
+	text-align: justify;
+	background-color: #222;
+	color: #f4f4f4;
+	font-size: 30px;
+
+
+}
+footer address {
+	text-align: center;
+	font-size: 25px;
+	font-style: normal;
+}
+footer p{
+	text-align: center;
+}
+footer address a{
+	text-decoration: none;
+	color:#009E2D;
+	font-style: normal;
+}
+
+
+
+
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #222;
+
+}
+.closeModal {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.closeModal:after {
+  content: "\d7";
+}
+.closeModal:hover { 
+  background: #f00; 
+ }
+ /*tablet*/
+ @media only screen and (max-width: 1200px) {
+ 	    p{
+        font-size: 22px;
+        margin: 50px 10px  50px 10px;
+        }
+    }
+
+/*celular */
+@media only screen and (max-width: 767px) {
+    p{
+        font-size: 14px;
+        margin: 50px 10px  50px 10px;
+        font-weight: 600;
+    }
+	h2{
+
+		font-size: 20px;
+	    line-height: 25px;
+
+	}
+	footer address{
+	font-size: 14px;
+	font-weight: 600;
+	}
+
+}
+
+
+  

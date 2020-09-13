@@ -1,7 +1,29 @@
 body{
-    background-image: url('5457d7c12177f21.jpg');
+    background-color:rgb(48, 44, 44);
     
 }
+#menu{
+    width: 1340px;
+    height: 60px;
+    }
+
+
+	#menu li		{display: inline;}
+
+    #menu li a		{background: url(MENU.png);
+        float: left; height: 40px;
+        left:28%;
+        position:relative;
+        text-indent: -10000px; margin-right: 10px;}
+    #menu .home		{background-position: -12px -5px; width: 200px;}
+    #menu .curriculo		{background-position: -350px -5px; width: 200px;}
+    #menu .formulario		{background-position: -650px -8px; width: 200px;}
+    #menu .produtos		{background-position: -950px -8px; width: 200px;}
+    #menu .home:hover		{background-position: -55px -59px; width: 200px;}
+    #menu .curriculo:hover		{background-position: -350px -59px; width: 200px;}
+    #menu .formulario:hover		{background-position: -650px -59px; width: 200px;}
+    #menu .produtos:hover		{background-position: -950px -59px; width: 200px;}
+    
 div{
     height: 50%;
     left:25%;
@@ -27,7 +49,7 @@ h2{
     padding:5px;
 }
 address{
-background-color: teal;
+
 font-size: 15px;
 color: white;
 font-family:Impact, fantasy;
@@ -37,6 +59,14 @@ padding:5px;
 }
 a:link{
     text-decoration:none;
+    color:white;
+}
+a:hover{
+    background-color: black;
+
+}
+a:visited{
+    color: white;
 }
 p{
     font-size: 15px;
@@ -46,16 +76,37 @@ p{
     margin: 0 0 0 0;
     padding:5px;
 }
-#a{
+.a{
     font-size: 50px;
     color: white;
     font-family:Impact;
-    height: 200px;
-    background-color: rgb(159, 112, 173);
-    margin: 0;
+    height: 113px;
+    background-color:teal;
+    margin-top: 5px;
     padding:5px;
     text-align: center;
-    
- 
+    line-height: 100px;
   
+}
+form{
+    background-color: teal;
+    padding-top: 20px;
+    padding-bottom:20px;
+    height: 70%;
+    left:25%;
+    position: relative;
+    width:50%;
+    font-family:Impact;
+}
+label{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    color: white;
+}
+form div{
+    margin-top: 20px;
+}
+.button{
+    left: 350px;
 }
