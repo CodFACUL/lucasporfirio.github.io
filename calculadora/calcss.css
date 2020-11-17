@@ -1,0 +1,19 @@
+body {
+    justify-content: center;
+    align-items: center;
+    background: black;
+    display:flex;
+}
+input[type=submit] {
+    width: 70px;
+    height: 55px;
+
+}
+div#calculadora div {
+    display: flex;
+}
+
+#visor {
+    width: 273px;
+    color: black ;
+}
