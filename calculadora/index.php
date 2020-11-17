@@ -8,21 +8,42 @@
 </head>
 <body>
 <?php
-session_start();
+    session_start();
 
-if (empty($_SESSION['calc'])) {
-    $_SESSION['calc'] = '';
+    if (empty($_SESSION['calc'])) {
+      $_SESSION['calc'] = '';
+    }
+
     if (!empty($_POST['entra']))
+    {
       if (
-        (substr($_SESSION['calc'], -1) == '*' || substr($_SESSION['calc'], -1) == '+' || substr($_SESSION['calc'], -1) == '-'|| substr($_SESSION['calc'], -1) == '/' )  && ( $_POST['resultado'] == '+' || $_POST['resultado'] == '-' || $_POST['resultado'] == '/' || $_POST['resultado'] == '*' ) )
-        
+        (  substr($_SESSION['calc'], -1) == '*' || substr($_SESSION['calc'], -1) == '+'  || substr($_SESSION['calc'], -1) == '-' || substr($_SESSION['calc'], -1) == '/') &&
+        ( $_POST['digito'] == '+' || $_POST['digito'] == '-' || $_POST['digito'] == '/'|| $_POST['digito'] == '*') )
+      {
+        $_SESSION['calc'] = sprintf(substr($_SESSION['calc'], 0, -1), $_POST['digito']);
+      }
 
-if ($_POST['digito'] == 'CE') {
+      if ($_POST['digito'] != '=') {
+        $_SESSION['calc'] = sprintf('%s%s', $_SESSION['calc'], $_POST['digito']);
+      }
+
+      if ($_POST['digito'] == '='
+          &&
+        ( strpos($_SESSION['calc'], '-') || strpos($_SESSION['calc'], '+') || strpos($_SESSION['calc'], '*') || strpos($_SESSION['calc'], '/') ) &&
+        ( substr($_SESSION['calc'], -1) != '*' && substr($_SESSION['calc'], -1) != '+' && substr($_SESSION['calc'], -1) != '-'  && substr($_SESSION['calc'], -1) != '/')) 
+        {
+        $digito = $result= eval('return ' . $_SESSION['calc'] .';');
+        $_SESSION['calc']=$digito;
+      } else {
+        $digito = $_SESSION['calc'];
+      }
+
+      if ($_POST['digito'] == 'CE') {
         unset($_SESSION['calc']);
         $digito = 0;
       }
-      
-?>
+    }
+  ?>
 <form method="POST">
         <div id="corpo">
             <input type="text" value="entra" name="entra" style="display:none;">
