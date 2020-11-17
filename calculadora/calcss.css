@@ -9,11 +9,11 @@ input[type=submit] {
     height: 55px;
 
 }
-div#calculadora div {
+div#corpo div {
     display: flex;
 }
 
-#visor {
+#resultado {
     width: 273px;
     color: black ;
 }
