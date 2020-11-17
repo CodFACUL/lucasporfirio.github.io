@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="calcss.css"/>
-    <title>Document</title>
+    <title>Calculadora</title>
 </head>
 <body>
 <?php
@@ -12,11 +12,16 @@ session_start();
 
 if (empty($_SESSION['calc'])) {
     $_SESSION['calc'] = '';
-  }
+    if (!empty($_POST['entra']))
+      if (
+        (substr($_SESSION['calc'], -1) == '*' || substr($_SESSION['calc'], -1) == '+' || substr($_SESSION['calc'], -1) == '-'|| substr($_SESSION['calc'], -1) == '/' )  && ( $_POST['resultado'] == '+' || $_POST['resultado'] == '-' || $_POST['resultado'] == '/' || $_POST['resultado'] == '*' ) )
+        
+
 if ($_POST['digito'] == 'CE') {
         unset($_SESSION['calc']);
         $digito = 0;
       }
+      
 ?>
 <form method="POST">
         <div id="corpo">
@@ -52,4 +57,5 @@ if ($_POST['digito'] == 'CE') {
 
     
 </body>
+
 </html>
