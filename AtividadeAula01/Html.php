@@ -10,8 +10,8 @@ class Html{
         $this->body = $pBody;
     }
 
-    public function _toString(){ 
-        echo '<head'.$this->head
-        .'/head>'.'<body>'$this->body
-        .'/body>';
+    public function __toString(){ 
+        return '<!doctype html><html lang="en"><head>'.$this->head
+        .'</head>'.'<body>'$this->body
+        .'</body></html>';
     }
