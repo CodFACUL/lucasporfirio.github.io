@@ -4,10 +4,8 @@ require('./lib/Link.class.php');
 require('./lib/Li.class.php');
 require('./lib/Ul.class.php');
 
-$html = new Html();
-$head = new Head();
-$head->addHead();
-$html->head='http://unidavi.edu.br'; //modo extenso// //modo1//
+$link = new Link();
+$link->url='http://unidavi.edu.br'; //modo extenso// //modo1//
 $link->txt = 'Unidavi';
 $link->target="_blank";
 $link->class ='btn';
