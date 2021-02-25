@@ -16,7 +16,7 @@ $link2 = new Link('http://google.com.br','Google',"_blank",'btn');// modo abrevi
 
 echo    $link2->getLink();
 
-echo= new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo2//
+echo new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo2//
 
 $ul = new Ul();
 $li1 = new Li('item 1','azul');
