@@ -9,7 +9,7 @@ class Ul{
     public function __toString(){
         $vUl = '<ul>';
         foreach ($this->lista as $valor){
-            $vUl .= $valor;
+            $vUl.=$valor;
 
         }
         $vUl.= '</ul>';
