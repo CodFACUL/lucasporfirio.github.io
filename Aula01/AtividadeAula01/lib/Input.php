@@ -1,14 +1,12 @@
 <?php
 
 class Input {
-    private $txt;
     private $class;
     private $type;
     private $id;
     private $name;
 
-    function Input($pTxt,$pClass){
-        $this->txt = $pTxt;
+    function Input($pName,$pClass,$pType,$pId){
         $this->class = $pClass;
         $this->type = $pType;
         $this->id = $pId;

@@ -11,7 +11,8 @@ require('./lib/Table.php');
 require('./lib/Th.php');
 require('./lib/Tr.php');
 require('./lib/Td.php');
-
+require('./lib/Label.php');
+require('./lib/Input.php');
 
 /*$link = new Link();
 $link->url='http://unidavi.edu.br'; //modo extenso// //modo1//
@@ -42,12 +43,18 @@ $tr1->addElemento($th1);
 $tr1->addElemento($th2);
 $tr2 = new Tr();
 $td1 = new Td('a','c1');
-$td2 = new Td('a','c1');
+$td2 = new Td('b','c1');
 $tr2->addElemento($td1);
 $tr2->addElemento($td2);
 $table->addElemento($tr1);
 $table->addElemento($tr2);
 echo $table;
+$form = new Form();
+$label1 = new Label('label1','male','Male');
+$input1 = new Input('input1','radio','male','gender','male');
+$form->addElemento($label1);
+$form->addElemento($input1);
+echo $form;
 
 
 
