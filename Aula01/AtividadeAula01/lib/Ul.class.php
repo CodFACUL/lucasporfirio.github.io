@@ -3,7 +3,7 @@
 class Ul{
     private $lista = array();
 
-    public function addUl($pLi){
+    public function addLi($pLi){
         $this->lista [] = $pLi;
     }
     public function __toString(){

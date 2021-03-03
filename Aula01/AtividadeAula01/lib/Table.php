@@ -3,8 +3,8 @@
 class Table{
     private $lista = [];
 
-    public function addTr($pTr){
-        $this->lista = $pTr;
+    public function addElemento($pElemento){
+        $this->lista = $pElemento;
     }
 
     public function __toString(){
