@@ -9,7 +9,7 @@ class Tr{
     public function __toString(){
         $vTr = '<tr>';
         foreach ($this->lista as $valor){
-            $vTr. = $valor;
+            $vTr.= $valor;
 
         }
         $vTr.= '</tr>';

@@ -10,10 +10,10 @@ class Table{
     public function __toString(){
         $vTable = '<table>';
         foreach ($this->lista as $valor){
-            $vTable .= $valor;
+            $vTable.= $valor;
 
         }
-        $vTable .= '</table>';
+        $vTable.= '</table>';
         return $vTable;
     }
 }
