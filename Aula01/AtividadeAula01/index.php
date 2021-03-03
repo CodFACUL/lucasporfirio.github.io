@@ -10,6 +10,7 @@ require('./lib/Head.php');
 require('./lib/Table.php');
 require('./lib/Th.php');
 require('./lib/Tr.php');
+require('./lib/Td.php');
 
 
 /*$link = new Link();
@@ -34,12 +35,16 @@ $ul->addLi($li1);
 $ul->addLi($li2);
 echo $ul;
 $table = new Table();
+$tr1 = new Tr();
 $th1 = new Th('1','l1');
 $th2 = new Th('2','l1');
-$table->addElemento($th1);
-$table->addElemento($th2);
-$tr1 = new Tr('a','c1');
-$tr2 = new Tr('a','c1');
+$tr1->addElemento($th1);
+$tr1->addElemento($th2);
+$tr2 = new Tr();
+$td1 = new Td('a','c1');
+$td2 = new Td('a','c1');
+$tr2->addElemento($td1);
+$tr2->addElemento($td2);
 $table->addElemento($tr1);
 $table->addElemento($tr2);
 echo $table;

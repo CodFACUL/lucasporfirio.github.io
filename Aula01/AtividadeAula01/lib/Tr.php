@@ -3,8 +3,8 @@
 class Tr{
     private $lista = array();
 
-    public function addTh($pTh){
-        $this->lista [] = $pTh;
+    public function addElemento($pElemento){
+        $this->lista [] = $pElemento;
     }
     public function __toString(){
         $vTr = '<tr>';
