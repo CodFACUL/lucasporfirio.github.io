@@ -11,8 +11,11 @@ require('./lib/Table.php');
 require('./lib/Th.php');
 require('./lib/Tr.php');
 require('./lib/Td.php');
-require('./lib/Label.php');
+require('./lib/Span.php');
 require('./lib/Input.php');
+
+
+
 
 /*$link = new Link();
 $link->url='http://unidavi.edu.br'; //modo extenso// //modo1//
@@ -50,9 +53,9 @@ $table->addElemento($tr1);
 $table->addElemento($tr2);
 echo $table;
 $form = new Form();
-$label1 = new Label('label1','male','Male');
-$input1 = new Input('input1','radio','male','gender','male');
-$form->addElemento($label1);
+$span1 = new Span('input-group-text','basic-addon1','@');
+$input1 = new Input('text','form-control','Username','Username','basic-addon1');
+$form->addElemento($span1);
 $form->addElemento($input1);
 echo $form;
 
