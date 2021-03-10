@@ -5,7 +5,7 @@ class Span {
     private $class;
     private $id;
 
-    function Label($pClass,$pId,$pTxt){
+    function Span($pClass,$pId,$pTxt){
         $this->txt = $pTxt;
         $this->class = $pClass;
         $this->id = $pId;
