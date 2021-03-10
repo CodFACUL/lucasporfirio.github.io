@@ -11,13 +11,13 @@ $link->target="_blank";
 $link->class ='btn';
 
 echo    $link->getLink();
-
+exit;
 $link2 = new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo1//
 
 echo    $link2->getLink();
 
 echo new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo2//
-
+exit;
 $ul = new Ul();
 $li1 = new Li('item 1','azul');
 $li2 = new Li('item 2','azul');
