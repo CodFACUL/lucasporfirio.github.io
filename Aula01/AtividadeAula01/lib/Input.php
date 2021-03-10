@@ -1,22 +1,19 @@
 <?php
 
 class Input {
-    private $txt;
     private $class;
     private $type;
-    private $id;
-    private $name;
+    private $place;
+    private $describ;
 
-    function Input($pTxt,$pClass){
-        $this->txt = $pTxt;
+    function Input( $pType,$pClass,$pPlaceholder, $pAriadescribedby){
         $this->class = $pClass;
         $this->type = $pType;
-        $this->id = $pId;
-        $this->name = $pName;
+        $this->place = $pPlaceholder;
+        $this->describ = $pAriadescribedby;
     }
 
     function __toString(){
-        return '<Input class='.$this->class
-        .'type="'. $this->type. '"id='. $this->id .'" name='. $this->name.'>';
+        return '<input type="'.$this->type.'" class="'. $this->class. '" placeholder="'. $this->place .'" aria-describedby="'. $this->describ.'">';
     }
 }

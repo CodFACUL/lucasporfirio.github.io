@@ -7,7 +7,7 @@ class Link{
     private $target;
     private $class;
 
-    function Link($purl,$pTxt,$pTarget,$pClass){
+    function Link($pUrl,$pTxt,$pTarget,$pClass){
         $this->url = $pUrl;
         $this->txt = $pTxt;
         $this->target = $pTarget;

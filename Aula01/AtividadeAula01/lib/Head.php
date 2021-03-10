@@ -10,8 +10,9 @@ class Head{
     public function __toString(){
         $vHead = '<head>';
         foreach ($this->lista as $tag){
-            $vHead. = $tag;
+            $vHead.= $tag;
         }
         $vHead.= '</head>';
         return $vHead;
     }
+}

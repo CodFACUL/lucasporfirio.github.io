@@ -1,19 +1,18 @@
 <?php
 
-class Table{
-    private $lista = [];
+class Div{
+    private $lista = array();
 
+    
     public function addElemento($pElemento){
         $this->lista [] = $pElemento;
     }
-
     public function __toString(){
-        $vTable = '<table>';
+        $vDiv = '<div>';
         foreach ($this->lista as $valor){
-            $vTable.= $valor;
-
+            $vDiv.= $valor;
         }
-        $vTable.= '</table>';
-        return $vTable;
+        $vDiv.= '</div>';
+        return $vDiv;
     }
 }
