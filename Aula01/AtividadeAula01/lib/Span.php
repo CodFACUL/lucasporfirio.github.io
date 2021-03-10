@@ -3,7 +3,7 @@
 class Span {
     private $txt;
     private $class;
-    private $for;
+    private $id;
 
     function Label($pClass,$pId,$pTxt){
         $this->txt = $pTxt;
@@ -12,6 +12,6 @@ class Span {
     }
 
     function __toString(){
-        return '<span class="'.$this->class.'" id="'.$this->for.'" >'.$this->txt.'</span>';
+        return '<span class="'.$this->class.'" id="'.$this->id.'" >'.$this->txt.'</span>';
     }
 }
