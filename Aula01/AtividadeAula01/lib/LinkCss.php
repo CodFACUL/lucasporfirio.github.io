@@ -19,7 +19,7 @@ class LinkCss{
     public function _toString(){ //modo2//
         echo '<link href="'.$this->url
         .'" rel="'.$this->rel
-        .'"integrity="'.$this->integrity.'"crossorgin="
+        .'" integrity="'.$this->integrity.'" crossorgin="
         '.$this->crossorgin.'>';
     }
 

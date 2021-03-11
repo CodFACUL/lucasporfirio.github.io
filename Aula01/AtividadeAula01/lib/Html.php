@@ -12,6 +12,7 @@ class Html{
 
     public function __toString(){ 
         return '<!doctype html><html lang="en"><head>'.$this->head
-        .'</head>'.'<body>'$this->body
+        .'</head>'.'<body>'.$this->body
         .'</body></html>';
     }
+}

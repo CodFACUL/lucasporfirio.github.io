@@ -14,9 +14,15 @@ require('./lib/Td.php');
 require('./lib/Span.php');
 require('./lib/Input.php');
 require('./lib/LinkCss.php');
+require('./lib/Metatags.php');
+require('./lib/Html.php');
 
 
-
+$head = new Head();
+$linkcss = new LinkCss( "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css","stylesheet" ,"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl","anonymous");
+$head->addHead($linkcss);
+$body = new Body();
+$html = new Html($head,$body);
 /*$link = new Link();
 $link->url='http://unidavi.edu.br'; //modo extenso// //modo1//
 $link->txt = 'Unidavi';
@@ -29,7 +35,7 @@ echo    $link->getLink();
 $link2 = new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo1//
 
 echo    $link2->getLink();
-$linkcss = new LinkCss( "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css","stylesheet" ,"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl","anonymous");
+
 
 //echo new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo2//
 
