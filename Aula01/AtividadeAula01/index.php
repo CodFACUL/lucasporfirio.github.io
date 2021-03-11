@@ -25,7 +25,7 @@ $link->class ='btn';*/
 $link = new Link('http://unidavi.edu.br','Unidavi',"_blank",'btn');
 
 echo    $link->getLink();
-exit;
+
 $link2 = new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo1//
 
 echo    $link2->getLink();

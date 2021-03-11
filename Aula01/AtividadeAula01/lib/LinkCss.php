@@ -1,6 +1,6 @@
 <?php
 
-class Link{
+class LinkCss{
 
     private $url;
     private $rel;
