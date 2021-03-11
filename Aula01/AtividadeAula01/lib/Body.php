@@ -10,10 +10,10 @@ class Body{
     public function __toString(){
         $vBody = '<body>';
         foreach ($this->lista as $valor){
-            $vBody .= $valor;
+            $vBody.= $valor;
 
         }
-        $vBody .= '</body>';
+        $vBody.= '</body>';
         return $vBody;
     }
 }
