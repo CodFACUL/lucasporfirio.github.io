@@ -22,7 +22,7 @@ class Link{
         '.$this->txt.'</a>';
     }
 
-    public function _toString(){ //modo2//
+    public function __toString(){ //modo2//
         echo '<a href="'.$this->url
         .'" target="'.$this->target
         .'" class="'.$this->class.'">

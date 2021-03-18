@@ -1,10 +1,10 @@
 <?php
 
 class Body{
-    private $lista = [];
+    private $lista = array();
 
     public function addElemento($pElemento){
-        $this->lista = $pElemento;
+        $this->lista[] = $pElemento;
     }
 
     public function __toString(){

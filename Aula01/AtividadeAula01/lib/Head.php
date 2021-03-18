@@ -5,14 +5,14 @@ class Head{
 
     
     public function addHead($pMetaTag){
-        $this->lista [] = $pMetaTag;
+        $this->lista[] = $pMetaTag;
     }
     public function __toString(){
         $vHead = '<head>';
         foreach ($this->lista as $tag){
-            $vHead.= $tag;
+            $vHead .= $tag;
         }
-        $vHead.= '</head>';
+        $vHead .= '</head>';
         return $vHead;
     }
 }

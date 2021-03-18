@@ -19,18 +19,26 @@ require('./lib/Html.php');
 
 
 $head = new Head();
-$linkcss = new LinkCss( "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css","stylesheet" ,"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl","anonymous");
+$linkcss = new LinkCss();
+$linkcss->link("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css","stylesheet" ,"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl","anonymous");
 $head->addHead($linkcss);
 $body = new Body();
 $html = new Html($head,$body);
+echo $html;
+
+
 /*$link = new Link();
 $link->url='http://unidavi.edu.br'; //modo extenso// //modo1//
 $link->txt = 'Unidavi';
 $link->target="_blank";
 $link->class ='btn';*/
 $link = new Link('http://unidavi.edu.br','Unidavi',"_blank",'btn');
+$body->addElemento($link);
 
-echo    $link->getLink();
+$link->getLink();
+
+
+
 
 $link2 = new Link('http://google.com.br','Google',"_blank",'btn');// modo abreviado// //modo1//
 
@@ -44,6 +52,7 @@ $li1 = new Li('item 1','azul');
 $li2 = new Li('item 2','azul');
 $ul->addLi($li1);
 $ul->addLi($li2);
+$body->addElemento($ul);
 echo $ul;
 $table = new Table();
 $tr1 = new Tr();
@@ -65,7 +74,6 @@ $input1 = new Input('text','form-control','Username','Username','basic-addon1');
 $form->addElemento($span1);
 $form->addElemento($input1);
 echo $form;
-echo $span1;
 
 
 
