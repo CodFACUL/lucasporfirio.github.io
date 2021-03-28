@@ -63,7 +63,6 @@ $div1->addElemento($table);
 $div1->addElemento($divform);
 $body->addElemento($div1);
 $html = new Html($head,$body);
-echo "<div class='btn btn-danger'>teste</div>";
 echo $html;
 
 
