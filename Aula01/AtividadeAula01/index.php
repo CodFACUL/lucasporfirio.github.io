@@ -1,22 +1,6 @@
 <?php
 
-require('./lib/Link.class.php');
-require('./lib/Li.class.php');
-require('./lib/Ul.class.php');
-require('./lib/Body.php');
-require('./lib/Div.php');
-require('./lib/Form.php');
-require('./lib/Head.php');
-require('./lib/Table.php');
-require('./lib/Th.php');
-require('./lib/Tr.php');
-require('./lib/Td.php');
-require('./lib/Span.php');
-require('./lib/Input.php');
-require('./lib/LinkCss.php');
-require('./lib/Metatags.php');
-require('./lib/Html.php');
-require('./lib/Title.php');
+require('autoload.php');
 
 $metaCharset = new Meta("UTF-8");
 $metaHttEquiv = new Meta(null, null, "X-UA-Compatible", "IE=edge");
@@ -62,7 +46,7 @@ $div1->addElemento($ul);
 $div1->addElemento($table);
 $div1->addElemento($divform);
 $body->addElemento($div1);
-$html = new Html($head,$body);
+$html = new Html("pt-br",$head,$body);
 echo $html;
 
 
