@@ -16,26 +16,26 @@ $head->addHead($title);
 $head->addHead($linkcss);
 $body = new Body("body");
 
-$ul = new Ul();
-$li1 = new Li('item 1','azul');
-$li2 = new Li('item 2','azul');
+$ul = new Ul("list-group");
+$li1 = new Li("list-group-item",'list-group-item');
+$li2 = new Li("list-group-item",'list-group-item');
 $ul->addLi($li1);
 $ul->addLi($li2);
 $div1 = new Div("container-sm");
-$table = new Table('table table-sm table-dark');
-$tr1 = new Tr();
-$th1 = new Th('1','l1');
-$th2 = new Th('2','l1');
+$table = new Table("table table-sm table-dark");
+$tr1 = new Tr("table-danger");
+$th1 = new Th("row",'l1');
+$th2 = new Th("col",'l1');
 $tr1->addElemento($th1);
 $tr1->addElemento($th2);
-$tr2 = new Tr();
-$td1 = new Td('a','c1');
-$td2 = new Td('b','c1');
+$tr2 = new Tr("table-success");
+$td1 = new Td('a',"table-warning");
+$td2 = new Td('b',"table-warning");
 $tr2->addElemento($td1);
 $tr2->addElemento($td2);
 $table->addElemento($tr1);
 $table->addElemento($tr2);  
-$form = new Form();
+$form = new Form("form-inline");
 $divform = new Div("input-group mb-3");
 $span1 = new Span('input-group-text','basic-addon1','@');
 $input1 = new Input('text','form-control','Username','Username','basic-addon1');
@@ -48,6 +48,6 @@ $div1->addElemento($divform);
 $body->addElemento($div1);
 $html = new Html($head,$body);
 echo $html;
-?>
+
 
 

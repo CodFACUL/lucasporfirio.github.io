@@ -4,7 +4,7 @@ class Title {
     private $txt;
     private $class;
 
-    function Title($pTxt,$pClass){
+    function __construct($pTxt,$pClass){
         $this->txt = $pTxt;
         $this->class = $pClass;
     }

@@ -4,7 +4,7 @@ class Td {
     private $txt;
     private $class;
 
-    function Td($pTxt,$pClass){
+    function __construct($pTxt,$pClass){
         $this->txt = $pTxt;
         $this->class = $pClass;
     }

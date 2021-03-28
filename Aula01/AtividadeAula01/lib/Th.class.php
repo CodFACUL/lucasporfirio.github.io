@@ -1,16 +1,17 @@
 <?php
 
 class Th {
-    private $txt;
     private $class;
+    private $txt;
 
-    function Th($pTxt,$pClass){
-        $this->txt = $pTxt;
+    function __construct($pClass,$pTxt){
         $this->class = $pClass;
+        $this->txt = $pTxt;
+        
     }
 
     function __toString(){
-        return '<th class='.$this->class
-        .'>'.$this->txt.'</th>';
+        return '<th scope="'.$this->class
+        .'">'.$this->txt.'</th>';
     }
 }

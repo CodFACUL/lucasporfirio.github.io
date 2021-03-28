@@ -5,7 +5,7 @@ class Span {
     private $class;
     private $id;
 
-    function Span($pClass,$pId,$pTxt){
+    function __construct($pClass,$pId,$pTxt){
         $this->txt = $pTxt;
         $this->class = $pClass;
         $this->id = $pId;

@@ -4,7 +4,7 @@ class H6 {
     private $txt;
     private $class;
 
-    function H6($pTxt,$pClass){
+    function __construct($pTxt,$pClass){
         $this->txt = $pTxt;
         $this->class = $pClass;
     }

@@ -5,7 +5,7 @@ class Html{
     private $body;
 
     
-    function Html($pHead,$pBody){
+    function __construct($pHead,$pBody){
         $this->head = $pHead;
         $this->body = $pBody;
     }

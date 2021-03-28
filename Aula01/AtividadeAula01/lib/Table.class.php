@@ -14,7 +14,7 @@ class Table{
     }
 
     public function __toString(){
-        $vTable = '<table class='.$this->class.'>';
+        $vTable = '<table class="'.$this->class.'">';
         foreach ($this->lista as $valor){
             $vTable.= $valor;
 

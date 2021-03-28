@@ -7,7 +7,7 @@ class Input {
     private $label;
     private $describ;
 
-    function Input( $pType,$pClass,$pPlaceholder,$pAriaLabel, $pAriadescribedby){
+    function __construct( $pType,$pClass,$pPlaceholder,$pAriaLabel, $pAriadescribedby){
         $this->class = $pClass;
         $this->type = $pType;
         $this->place = $pPlaceholder;

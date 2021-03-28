@@ -1,16 +1,17 @@
 <?php
 
 class Li {
-    private $txt;
     private $class;
+    private $txt;
+    
 
-    function Li($pTxt,$pClass){
-        $this->txt = $pTxt;
+    function __construct($pTxt,$pClass){
         $this->class = $pClass;
+        $this->txt = $pTxt;
     }
 
     function __toString(){
-        return '<li class='.$this->class
-        .'>'.$this->txt.'</lil>';
+        return '<li class="'.$this->class
+        .'">'.$this->txt.'</li>';
     }
 }
