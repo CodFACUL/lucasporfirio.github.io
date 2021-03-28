@@ -11,7 +11,7 @@ class Html{
     }
 
     public function __toString(){ 
-        return '<!doctype html><html lang="en">'.$this->head.$this->body
+        return '<!doctype html><html lang="pt">'.$this->head.$this->body
         .'</html>';
     }
 }

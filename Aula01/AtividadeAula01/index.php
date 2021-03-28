@@ -2,9 +2,9 @@
 
 require('autoload.php');
 
-$metaCharset = new Meta("UTF-8");
-$metaHttEquiv = new Meta(null, null, "X-UA-Compatible", "IE=edge");
-$metaName = new Meta(null, "viewport", null, "width=device-width, initial-scale=1.0");
+$metaCharset = new Metatags("UTF-8");
+$metaHttEquiv = new Metatags(null, null, "X-UA-Compatible", "IE=edge");
+$metaName = new Metatags(null, "viewport", null, "width=device-width, initial-scale=1.0");
 $title = new Title('titulo',"Atividade");
 $head = new Head();
 $linkcss = new LinkCss();
@@ -46,8 +46,8 @@ $div1->addElemento($ul);
 $div1->addElemento($table);
 $div1->addElemento($divform);
 $body->addElemento($div1);
-$html = new Html("pt-br",$head,$body);
+$html = new Html($head,$body);
 echo $html;
-
+?>
 
 

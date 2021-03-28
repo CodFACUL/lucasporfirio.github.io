@@ -1,5 +1,5 @@
 <?php
-class Meta {
+class Metatags {
     
     private $charset;
     private $httpEquiv;
