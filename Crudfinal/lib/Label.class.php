@@ -11,7 +11,7 @@ class Label {
         $this->class =$class;
     }
 
-    public function criaLabel() {
+    public function __toString() {
         return '<label for="'.$this->for.'" class="'.$this->class.'">'.$this->texto.'</label>';
     }
 }
