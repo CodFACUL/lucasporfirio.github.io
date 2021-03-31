@@ -16,14 +16,14 @@ class Link{
     }
 
     public function getLink(){    //modo1//
-        echo '<a href="'.$this->url
+        return '<a href="'.$this->url
         .'" target="'.$this->target
         .'" class="'.$this->class.'">
         '.$this->txt.'</a>';
     }
 
     public function __toString(){ //modo2//
-        echo '<a href="'.$this->url
+        return '<a href="'.$this->url
         .'" target="'.$this->target
         .'" class="'.$this->class.'">
         '.$this->txt.'</a>';
