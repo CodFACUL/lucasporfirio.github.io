@@ -8,7 +8,7 @@ class Ul{
         $this->vClass = $vClass;
     }
 
-    public function addLi($pLi){
+    public function addElemento($pLi){
         $this->lista [] = $pLi;
     }
     

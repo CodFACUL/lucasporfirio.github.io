@@ -1,12 +1,12 @@
 <?php
 
 class Td {
-    private $txt;
     private $class;
+    private $txt;
 
-    function __construct($pTxt,$pClass){
-        $this->txt = $pTxt;
+    function __construct($pClass,$pTxt){
         $this->class = $pClass;
+        $this->txt = $pTxt;     
     }
 
     function __toString(){

@@ -5,7 +5,7 @@ class Li {
     private $txt;
     
 
-    function __construct($pTxt,$pClass){
+    function __construct($pClass,$pTxt){
         $this->class = $pClass;
         $this->txt = $pTxt;
     }
