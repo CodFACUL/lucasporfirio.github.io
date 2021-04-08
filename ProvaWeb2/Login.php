@@ -1,6 +1,19 @@
 <?php
 
 require('autoload.php');
+require ('Conexao.php');
+require ('Funcoes.php');
+
+
+if (!empty($_GET['acao'])) {
+  if ($_GET['acao'] == 'sair') {
+    unset($_SESSION['cLogin']);
+    $script1 = new Script(null,'"window.location.href = "./index.php";"');
+    echo $script1;
+    
+
+  }
+}
 
 $metaCharset = new Metatags("UTF-8");
 $metaHttEquiv = new Metatags(null, null, "X-UA-Compatible", "IE=edge");
@@ -19,7 +32,36 @@ $head->addHead($linkcss);
 $head->addHead($linkcss2);
 $body = new Body("body");
 $login =new Div("login");
+
+
+
+
+
+if (!empty($_SESSION['cLogin'])) {
+
+$script = new Script(null,'"window.location.href = "./TabelaP.php";"');
+$login->addElemento($script);
+
+}
+
+
+
 $contlog = new Div("container");
+
+if (!empty($_POST['password']) && !empty($_POST['username'])) {
+    $email = $_POST['username'];
+    $senha = $_POST['password'];
+
+    if (login($email, $senha)) {
+
+        $contlog->addElemento($script);
+
+        } else {
+$alertadiv = new Div("alert alert-danger");
+$alertadiv->addElemento('usuários e/ou senha incorretos!');
+
+    }
+}
 $loginrow = new Div("row justify-content-center align-items-center login-row");
 $logincolum = new Div("col-md-6 login-column");
 $loginbox = new Div("col-md-12 login-box");

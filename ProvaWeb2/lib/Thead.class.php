@@ -1,6 +1,6 @@
 <?php
 
-class Div{
+class Thead{
     private $class;
     private $lista = array();
 
@@ -12,11 +12,11 @@ class Div{
         $this->lista [] = $pElemento;
     }
     public function __toString(){
-        $vDiv = '<div class="'.$this->class.'">';
+        $vThead = '<thead class="'.$this->class.'">';
         foreach ($this->lista as $valor){
-            $vDiv.= $valor;
+            $vThead.= $valor;
         }
-        $vDiv.= '</div>';
-        return $vDiv;
+        $vThead.= '</thead>';
+        return $vThead;
     }
 }

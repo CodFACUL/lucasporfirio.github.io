@@ -8,6 +8,7 @@ class Td {
         $this->class = $pClass;
         $this->txt = $pTxt;     
     }
+    
 
     function __toString(){
         return '<td class='.$this->class

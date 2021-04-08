@@ -4,8 +4,8 @@ class Div{
     private $class;
     private $lista = array();
 
-    public function __construct($class) {
-        $this->class = $class;
+    public function __construct($vClass) {
+        $this->class = $vClass;
     }
     
     public function addElemento($pElemento){
