@@ -1,0 +1,7 @@
+{"name":"cadastro/produtos",
+"autoload":{
+    "psr-4":{
+        "App\\":"app/"
+    }
+}
+}
