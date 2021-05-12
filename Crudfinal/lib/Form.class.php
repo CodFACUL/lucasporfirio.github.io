@@ -14,7 +14,7 @@ class Form{
     }
 
     public function __toString(){
-        $vForm = '<form class="'.$this->vClass.'">';
+        $vForm = '<form class="'.$this->vClass.'" action="../Tabela">';
         foreach ($this->lista as $valor){
             $vForm.= $valor;
 

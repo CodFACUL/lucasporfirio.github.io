@@ -1,11 +1,11 @@
 <?php
 class Metatags {
-    
+    // atributo
     private $charset;
     private $httpEquiv;
     private $content;
     private $name;
-    
+    // chama os atributos para cada objeto que se deseja criar
     public function __construct($pCharset=null, $pName=null, $pHttpEquiv=null, $pContent=null) {
         $this->charset = $pCharset;
         $this->httpEquiv = $pHttpEquiv;
@@ -26,3 +26,5 @@ class Metatags {
         return $tag;
     }
 }
+
+   

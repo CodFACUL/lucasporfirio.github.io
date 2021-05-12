@@ -1,11 +1,11 @@
 <?php
 
 require('autoload.php');
-
+require('Conexao.php');
 $metaCharset = new Metatags("UTF-8");
 $metaHttEquiv = new Metatags(null, null, "X-UA-Compatible", "IE=edge");
 $metaName = new Metatags(null, "viewport", null, "width=device-width, initial-scale=1.0");
-$title = new Title('titulo',"Tabela");
+$title = new Title("Tabela",'titulo');
 $head = new Head();
 $linkcss = new LinkCss();
 $linkcss->link("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css","stylesheet" ,"sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6","anonymous");
@@ -19,7 +19,7 @@ $container = new Div("container");
 
 $barra = new Div("row pb-5");
 $conteudoBarra = new Div("col bg-primary");
-$texto = new  H4("olá mundo",null);
+$texto = new  H4("Lista",null);
 $conteudoBarra->addElemento($texto);
 $barra->addElemento($conteudoBarra);
 
@@ -78,7 +78,10 @@ $tbody->addElemento($tr2);
 $thead->addElemento($tr1);
 $table->addElemento($thead);
 $table->addElemento($tbody);
-$miolo->addElemento($table);
+
+
+
+$miolo->addElemento("jkkkk");
 $body->addElemento($container);
 $html = new Html($head,$body);
 echo $html;
