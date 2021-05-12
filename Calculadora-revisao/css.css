@@ -1,0 +1,19 @@
+#calculadora{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+input{
+    width: 60px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+#dados{
+    width: 254px;
+
+    
+}
