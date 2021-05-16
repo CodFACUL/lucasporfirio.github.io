@@ -14,11 +14,6 @@ require ('./Calculos.php');
     <title>Calculadora</title>
 </head>
 <body>
-<?php
-session_start();
-
-$logica= new Calculos();
-$logica->logica();
 
 
 
@@ -29,14 +24,20 @@ $logica->logica();
 
 
 
-?>
+
+
+
+
+
+
+
 
 <div class="container">
     <div>
         <form method="POST">
             <div id="calculadora">
                 <div>
-                    <input class="alert-secondary"id="dados" type="text" name="display" value="<?php echo $_SESSION['display'] ?>"></input>
+                    <input class="alert-secondary"id="dados" type="text" name="display" value="<?php echo $_SESSION['botao'] ?>"></input>
                 </div>
                 <div>
                     <input class="bg-danger" type="submit" name="botao" value="1">
