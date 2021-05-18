@@ -9,11 +9,10 @@
 
        public function Soma($val1,$val2){
             $_SESSION['valor1']=$val1+$val2;
-            $_SESSION['display']='';
+            $_SESSION['display']=null;
             $_SESSION['valor2']=null;
             if($_POST['botao']!='='){
                 $_SESSION['operador']=$_POST['botao'];
-                print_r('somou');
             }else{
                 $_SESSION['operador']='N';
                 $_SESSION['display']=$_SESSION['valor1'];
@@ -22,7 +21,7 @@
         }
        public function Subtrai($val1,$val2){
             $_SESSION['valor1']=$val1-$val2;
-            $_SESSION['display']='';
+            $_SESSION['display']=null;
             $_SESSION['valor2']=null;
             if($_POST['botao']!='='){
                 $_SESSION['operador']=$_POST['botao'];
@@ -35,11 +34,10 @@
         
         public function Multiplica($val1,$val2){
             $_SESSION['valor1']=$val1*$val2;
-            $_SESSION['display']='';
+            $_SESSION['display']=null;
             $_SESSION['valor2']=null;
             if($_POST['botao']!='='){
                 $_SESSION['operador']=$_POST['botao'];
-                print_r('multiplicou');
             }else{
                 $_SESSION['operador']='N';
                 $_SESSION['display']=$_SESSION['valor1'];
@@ -48,9 +46,14 @@
         }
         
        public function Divide($val1,$val2){
-
+        if($val2==0){
+            $_SESSION['display']='Impossível dividir por zero';
+            unset($_SESSION['valor1']);
+            unset($_SESSION['valor2']);
+            unset($_SESSION['operador']);
+        }else{
             $_SESSION['valor1']=$val1/$val2;
-            $_SESSION['display']='';
+            $_SESSION['display']=null;
             $_SESSION['valor2']=null;
             if($_POST['botao']!='='){
                 $_SESSION['operador']=$_POST['botao'];
@@ -58,10 +61,11 @@
                 $_SESSION['operador']='N';
                 $_SESSION['display']=$_SESSION['valor1'];
             }
-        
+        }
         }
         
         function logica(){
+            
         if($_POST['botao']=='C'){
             unset($_SESSION['display']);
             unset($_SESSION['valor1']);
@@ -71,7 +75,7 @@
         if(empty($_SESSION['operador'])){
             $_SESSION['operador']=null;
         }
-        if(empty($_SESSION['display'])){
+        if(!isset($_SESSION['display'])){
             $_SESSION['display']=null;
         }
         if(empty($_SESSION['valor1'])){
@@ -82,11 +86,15 @@
         }
          if(isset($_POST['botao'])){
 
-            if($_POST['botao']!='-' and $_POST['botao']!='+'
-                                    and $_POST['botao']!='*' 
-                                    and $_POST['botao']!='/'
-                                    and $_POST['botao']!='='
-                                    and $_POST['botao']!='C'){
+             if($_SESSION['display']=='Impossível dividir por zero'){
+               $_SESSION['display']='';
+             }
+
+            if($_POST['botao']!='-' && $_POST['botao']!='+'
+                                    && $_POST['botao']!='*' 
+                                    && $_POST['botao']!='/'
+                                    && $_POST['botao']!='='
+                                    && $_POST['botao']!='C'){
                                             if($_SESSION['operador']=='N'){
                                                 $_SESSION['display']=$_POST['botao'];
                                                 $_SESSION['valor1']='';
@@ -94,10 +102,11 @@
                                             }else{
                                             $_SESSION['display'].=$_POST['botao'];}
                                     }
-            if($_POST['botao']=='-' or $_POST['botao']=='+'
-                                    or $_POST['botao']=='*' 
-                                    or $_POST['botao']=='/'
-                                    or $_POST['botao']=='='){
+                                   
+            if($_POST['botao']=='-' || $_POST['botao']=='+'
+                                    || $_POST['botao']=='*' 
+                                    || $_POST['botao']=='/'
+                                    || $_POST['botao']=='='){
                                         if ($_SESSION['valor1']==''){
                                         $_SESSION['valor1']=$_SESSION['display'];
                                         $_SESSION['display']='';
@@ -107,17 +116,11 @@
                                                 $_SESSION['operador']=$_POST['botao'];}
                                            else{
                                                 $_SESSION['valor2']=$_SESSION['display'];
-                                                print_r($_SESSION['valor2']);
-                                                print_r('entraaaqa');
-                                                $_SESSION['display']='';
+                                                $_SESSION['display']=null;
                                                     }
-                                                    if((!is_numeric($_SESSION['valor2']))){
-                                                           
-                                                            print_r('caceta');
-                                                        $_SESSION['display']='';
-                                                    
+                                                    if((is_null($_SESSION['valor2']))&& $_SESSION['valor2']!="0"){                                            
+                                                        $_SESSION['display']=null;
                                                     }else{
-                                                        print_r('vai tomar no cu');
                                                         if($_SESSION['operador']=='+'){
                                                             $this->Soma((double)$_SESSION['valor1'],(double)$_SESSION['valor2']);
                                                         }else if($_SESSION['operador']=='-'){
