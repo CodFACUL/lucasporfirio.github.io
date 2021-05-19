@@ -27,21 +27,21 @@ if ($_POST['acao']=='Enviar'){
     }else{
         $nome=null;
     }
-    if(empty($_POST['nome'])){
+    if(empty($_POST['valor'])){
         $valor='<div class="alert alert-warning" role="alert">
         Preencha o campo Valor!
       </div>';
     }else{
         $valor=null;
     }
-    if(empty($_POST['nome'])){
+    if(empty($_POST['qtd'])){
         $qtd='<div class="alert alert-warning" role="alert">
         Preencha o campo Quantidade!
       </div>';
     }else{
         $qtd=null;
     }
-    if (($nome and $valor and $qtd)==null){
+    if (($nome || $valor || $qtd)==null){
         $nometxt=$_POST['nome']."\n";
         $valortxt=$_POST['valor']."\n";
         $qtdtxt=$_POST['qtd']."\n"."\n";
