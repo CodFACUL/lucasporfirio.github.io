@@ -22,12 +22,12 @@ function Visor(numero){
 function acao(op){
     if(lastclick!=op){
         lastclick=op
-        if(valor1== null||op!="="){
+        if(valor1== null && op!="="){
             operador=op
             valor1=divResultado.innerHTML
             divResultado.innerHTML=''
         }else
-        if(valor1!=null){
+        if(valor1!=null && divResultado.innerHTML!=''){
             valor2=divResultado.innerHTML
             if(operador=="+"){
                 resultado=parseFloat(valor1)+parseFloat(valor2)
@@ -39,10 +39,14 @@ function acao(op){
                 resultado=parseFloat(valor1)*parseFloat(valor2)
             }else
             if(operador=="/"){
-                resultado=parseFloat(valor1)/parseFloat(valor2)               
+                if(valor2=="0"){
+                    resultado="Impossível dividir por zero"
+                }else{
+                    resultado=parseFloat(valor1)/parseFloat(valor2)               
+                }
             }
             divResultado.innerHTML=resultado
-            if(op=="="){
+            if(op=="=" ){
                 valor1=null
                 operador=null
             }else{
