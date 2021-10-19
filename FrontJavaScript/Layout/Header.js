@@ -1,6 +1,5 @@
-class Header {
-  getHeader(){
-    return `aaaaa 
+
+ function getHeader(){
+    return `<div>aaaa</div>
     `
-  }
 }
