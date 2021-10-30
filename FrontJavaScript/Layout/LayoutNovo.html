@@ -55,16 +55,20 @@
         </div>
         <div id="header" class="container p-3">
             <div class="d-block h-25">
-              <div class="Jumbotron mb-1 rounded bg-secondary" style="height: 170px;">
-                <h1 class="display-4">Máquinas</h1>
+              <div class="Jumbotron mb-1 rounded bg-dark" style="height: 170px;">
+                <h1 class="ms-4  text-white display-4">Máquinas</h1>
               </div>
-              <button class="mt-2 btn btn-success float-end"><i class="bi me-2 bi-plus-square"></i>Incluir</button>
-              <button class="mt-2 btn btn-primary float-end me-3"><i class="bi me-2 bi-search"></i>Visualizar</button>
+              <button class="mt-2 btn btn-success"><i class="bi me-2 bi-plus-square"></i>Incluir</button>  
+              <button class="mt-2 btn btn-danger float-end me-1"><i class="bi me-1 bi-trash"></i>Deletar</button>
+              <button class="mt-2 btn btn-warning float-end me-1"><i class="bi me-1 bi-pencil"></i>Alterar</button>
+              <button class="mt-2 btn btn-primary float-end me-1"><i class="bi me-1 bi-search"></i>Visualizar</button>
+              
             </div>
-            <div class="d-block bg-white h-75" >
+            <div class="d-block position-relative bg-white h-75" >
               <table class="table   table-hover">
                 <thead class="bg-primary">
                     <tr>
+                        <th></th>
                         <th class="col-2">Código Máquina</th>
                         <th style="width:200px">Cliente</th>
                         <th class="col-1">Modelo</th>
@@ -77,6 +81,7 @@
                 </thead>
                 <tbody class="table-white bg-white text-dark">
                   <tr>
+                    <td><input class="form-check" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" ></td>
                     <td>4020-370-410</td>
                     <td class="col-3"><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">37.337.264/0001-82aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></td>
                     <td>FT-250</td>
@@ -85,6 +90,7 @@
                     <td>25</td>
                     <td>450</td>
                     <td >
+                      <i class="bi  bi-search"></i>
                       <i class="bi ms-3 bi-pencil"></i>
                       <i class="bi ms-3 bi-trash"></i>
                     </td>
@@ -92,6 +98,15 @@
                 
                 </tbody>
             </table>
+            <nav class="position-absolute bottom-0 start-50 translate-middle-x" aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+              </ul>
+            </nav>
             </div>
         </div>
           
