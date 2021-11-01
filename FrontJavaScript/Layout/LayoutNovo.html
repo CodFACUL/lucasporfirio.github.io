@@ -12,7 +12,7 @@
     
     <title>Máquinas</title>
   </head>
-  <body>
+  <body >
 
     <main class="d-flex " style="background-color: rgb(222, 226, 226);">
         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="height: 100vh; width: 280px;">
@@ -28,7 +28,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a onclick="tabelaMaquina" href="#" class="nav-link text-white">
                   <i class="bi me-2 bi-briefcase" viewBox="0 0 16 16"></i>
                     Vendedores
                 </a>
@@ -56,67 +56,47 @@
         <div id="header" class="container p-3">
             <div class="d-block h-25">
               <div class="Jumbotron mb-1 rounded bg-dark" style="height: 170px;">
-                <h1 class="ms-4  text-white display-4">Máquinas</h1>
+                <h1 class="ms-4  text-white display-4" id="titulo-banner"></h1>
               </div>
-              <button class="mt-2 btn btn-success"><i class="bi me-2 bi-plus-square"></i>Incluir</button>  
-              <button class="mt-2 btn btn-danger float-end me-1"><i class="bi me-1 bi-trash"></i>Deletar</button>
-              <button class="mt-2 btn btn-warning float-end me-1"><i class="bi me-1 bi-pencil"></i>Alterar</button>
+              <button type="button" class="mt-2 btn btn-success" onclick="criaIncluir()" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi me-2 bi-plus-square"></i>Incluir</button>  
+              <button class="mt-2 btn btn-danger float-end me-1" onclick="criaDeletar ()" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi me-1 bi-trash"></i>Deletar</button>
+              <button class="mt-2 btn btn-warning float-end me-1" onclick="criaAlterar()" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi me-1 bi-pencil"></i>Alterar</button>
               <button class="mt-2 btn btn-primary float-end me-1"><i class="bi me-1 bi-search"></i>Visualizar</button>
               
             </div>
-            <div class="d-block position-relative bg-white h-75" >
-              <table class="table   table-hover">
-                <thead class="bg-primary">
-                    <tr>
-                        <th></th>
-                        <th class="col-2">Código Máquina</th>
-                        <th style="width:200px">Cliente</th>
-                        <th class="col-1">Modelo</th>
-                        <th class="col-1">Fases</th>
-                        <th class="col-1">Voltagem</th>
-                        <th class="col-1">Amperagem</th>
-                        <th class="col-1">Peso</th>
-                        <th class="col-1">Ações</th>
-                    </tr>
-                </thead>
-                <tbody class="table-white bg-white text-dark">
-                  <tr>
-                    <td><input class="form-check" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" ></td>
-                    <td>4020-370-410</td>
-                    <td class="col-3"><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">37.337.264/0001-82aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></td>
-                    <td>FT-250</td>
-                    <td>1</td>
-                    <td>220</td>
-                    <td>25</td>
-                    <td>450</td>
-                    <td >
-                      <i class="bi  bi-search"></i>
-                      <i class="bi ms-3 bi-pencil"></i>
-                      <i class="bi ms-3 bi-trash"></i>
-                    </td>
-                  </tr>  
-                
-                </tbody>
-            </table>
-            <nav class="position-absolute bottom-0 start-50 translate-middle-x" aria-label="Page navigation example">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
-              </ul>
-            </nav>
+            <div id="tabela" class="d-block position-relative  h-75">
+              
+            
             </div>
         </div>
-          
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="titulo-modal"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modal-body" class="modal-body">
+            </div>
+            <div id="modal-footer" class="modal-footer"> 
+            </div>
+            </div>
+        </div>
+        </div>
     </main>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script></script>
+    <script src="../Vendedor/ViewVendedor.js"></script>
+    <script src="../Vendedor/Incluir.js"></script>
+    <script src="../Vendedor/Alterar.js"></script>
+    <script src="../Vendedor/Deletar.js"></script>
+    <script src="../Maquina/ViewMaquina.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
