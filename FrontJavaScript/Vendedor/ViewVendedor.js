@@ -1,3 +1,11 @@
+const MSG = document.createElement('div');
+MSG.setAttribute('class','alert alert-danger');
+MSG.innerHTML='<p>Preencha corretamente todos os campos</p>';
+const headers = {
+    "Content-Type": "application/json",                                                                                                
+    "Access-Control-Origin": "*"
+ }
+
 function tabelaVendedor(tabela){
     tabela.innerHTML=`<table class="table   table-hover">
                 <thead class="bg-primary">
@@ -5,8 +13,8 @@ function tabelaVendedor(tabela){
                         <th></th>
                         <th class="col-1">Código</th>
                         <th style="width:200px">Vendedor</th>
-                        <th class="col-3">CNPJ</th>
-                        <th class="col-7">Ações</th>
+                        <th class="col-6">CNPJ</th>
+                        <th class="">Ações</th>
                     </tr>
                 </thead>
                 <tbody id="tbody" class="table-white bg-white text-dark">
@@ -35,21 +43,44 @@ function body(){
            let tbody = document.getElementById('tbody');
            let tr = document.createElement('tr');
            tr.innerHTML=`<td>
-                            <input class="form-check" type="radio" name="exampleRadios" id="exampleRadios1" value="`+user.id+`" >
+                            <input class="form-check" type="checkbox" onclick="rowSelected(event)" name="row" id="`+user.id+`" >
                         </td>
                         <td>`+user.id+`</td>
                         <td class="col-3"><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">`+user.nome+`</div></td>
                         <td>`+user.cnpj_vend+`</td>
                         <td >
-                             <i class="bi  bi-search"></i>
-                             <i class="bi ms-3 bi-pencil"></i>
-                             <i class="bi ms-3 bi-trash"></i>
+                             <i onclick="criaVisualizar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi  bi-search"></i>
+                             <i onclick="criaAlterar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-pencil"></i>
+                             <i onclick="criaDeletar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-trash"></i>
                         </td>` 
             tbody.appendChild(tr);
         })
     });
 }
-let titulobanner= document.getElementById('titulo-banner');
+
+function camposVendedor(){
+    mbody.innerHTML=`<div class="input-group mb-3">
+                            <label for="nome" class="input-group-text">Nome</label>
+                            <input type="text" id="nome" required name="nome" class="form-control">
+                        </div>
+                        <div class="input-group">
+                            <label for="cnpj" class="input-group-text">CNPJ</label>
+                            <input type="text" onkeypress="mascaraCNPJ()" onchange="mascaraCNPJ()"  maxlength="18"  id="cnpj" required name="cnpj" class="form-control">
+                        </div>`
+    const nome = document.getElementById('nome');
+    const CNPJ = document.getElementById('cnpj');
+    return [nome,CNPJ]
+}
+
+const titulobanner= document.getElementById('titulo-banner');
 titulobanner.innerHTML= 'Vendedores';
-let tabela= document.querySelector('#tabela');
+const tabela= document.querySelector('#tabela');
 tabelaVendedor(tabela);
+
+function atualizaDados(){
+    tabelaVendedor(tabela);
+    altera.disabled=true;
+    visualiza.disabled=true;
+    deleta.disabled=true;
+    check.length = 0;
+}
