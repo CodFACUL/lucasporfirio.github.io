@@ -13,7 +13,7 @@
     
     <title>Máquinas</title>
   </head>
-  <body >
+  <body onload="abaCliente()" >
 
     <main class="d-flex " style="background-color: rgb(222, 226, 226);">
         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="height: 100vh; width: 280px;">
@@ -23,19 +23,19 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a  class="nav-link active" aria-current="page">
+                <a  class="nav-link" aria-current="page">
                   <i class="bi me-2 bi-house-door" viewBox="0 0 16 16"></i>
                     Home 
                 </a>
               </li>
               <li>
-                <a onclick="tabelaMaquina" href="#" class="nav-link text-white">
+                <a href="../Layout/index.html" class="nav-link text-white">
                   <i class="bi me-2 bi-briefcase" viewBox="0 0 16 16"></i>
                     Vendedores
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="#" class="nav-link text-white active">
                   <i class="bi me-2 bi-people" viewBox="0 0 16 16"> </i>
                     Clientes
                 </a>
@@ -90,13 +90,13 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script></script>
-    <script src="../Vendedor/ViewVendedor.js"></script>
     <script src="../Vendedor/ModelVendedor.js"></script>
     <script src="../Vendedor/Incluir.js"></script>
     <script src="../Vendedor/Alterar.js"></script>
     <script src="../Vendedor/Deletar.js"></script>
     <script src="../Vendedor/Visualizar.js"></script>
     <script src="../Maquina/ViewMaquina.js"></script>
+    <script src="../Cliente/ViewCliente.js"></script>
     <script src="../TratamentoDados.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
