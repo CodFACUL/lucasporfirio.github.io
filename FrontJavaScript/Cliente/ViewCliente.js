@@ -30,7 +30,6 @@ class ViewCliente{
         })
         .then(function(response){
             response.forEach((user) => {
-                console.log(user)
             let tbody = document.getElementById('tbody');
             let tr = document.createElement('tr');
             tr.innerHTML=`<td>

@@ -43,8 +43,10 @@ class Visualizar{
                     case 'cliente':
                         const CamposCli = ViewCliente.camposCliente();
                         desabilitado(CamposCli);
+                        console.log(response)
                         CamposCli[0].value = response.nome;
                         CamposCli[1].value = response.cnpj_cli;
+                        CamposCli[2].value = response.vendedor_nome;
                         break;
                     case 'maquina':
                         const CamposMaq = ViewMaquina.camposMaquina();
@@ -54,7 +56,7 @@ class Visualizar{
                         CamposMaq[2].value = response.amperagem;
                         CamposMaq[3].value = response.voltagem;
                         CamposMaq[4].value = response.peso;
-                        CamposMaq[5].value = response.cliente;
+                        CamposMaq[5].value = response.cli
                         break;
                 }
             })    
