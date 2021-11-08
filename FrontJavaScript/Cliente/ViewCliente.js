@@ -39,8 +39,8 @@ class ViewCliente{
                             <td>`+user.id+`</td>
                             <td><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">`+user.nome+`</div></td>
                             <td>`+user.cnpj_cli+`</td>
-                            <td><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;"></div></td>
-                            <td></td>
+                            <td>`+user.vendedor_nome+`<div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;"></div></td>
+                            <td>`+user.cnpj_vend+`</td>
                             <td class="col-1">
                                 <i onclick="criaVisualizar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi  bi-search"></i>
                                 <i onclick="criaAlterar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-pencil"></i>
