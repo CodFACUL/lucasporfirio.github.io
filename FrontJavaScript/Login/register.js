@@ -1,8 +1,8 @@
 function register(){
     const email = document.getElementById('email');
-    const senha = document.getElementById('senha');
-    const nome = document.getElementById('nome');
-    const confirmSenha = document.getElementById('confirmSenha');
+    const password = document.getElementById('senha');
+    const name = document.getElementById('nome');
+    const password_confirmation = document.getElementById('confirmSenha');
     
     const headers = {
         "Content-Type": "application/json",                                                                                                
@@ -12,7 +12,7 @@ function register(){
         email: email.value,
         password: senha.value,
         name: nome.value,
-        confirmSenha: confirmSenha.value
+        password_confirmation: confirmSenha.value
     }
     fetch('http://localhost:8000/api/auth/register',{
                 method: 'POST',
