@@ -1,8 +1,8 @@
 function register(){
     const email = document.getElementById('email');
-    const password = document.getElementById('senha');
-    const name = document.getElementById('nome');
-    const password_confirmation = document.getElementById('confirmSenha');
+    const senha = document.getElementById('senha');
+    const nome = document.getElementById('nome');
+    const confirmSenha = document.getElementById('confirmSenha');
     
     const headers = {
         "Content-Type": "application/json",                                                                                                
@@ -23,7 +23,7 @@ function register(){
                 return response.json()
             })
             .then(function(response){
-               
+                window.location.replace('file:///C:/xampp/htdocs/lucasporfirio.github.io/FrontJavaScript/Login/login.html')
             })
 
 }
