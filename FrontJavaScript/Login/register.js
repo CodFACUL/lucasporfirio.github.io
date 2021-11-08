@@ -10,8 +10,8 @@ function register(){
     }
     const dados = {
         email: email.value,
-        senha: senha.value,
-        nome: nome.value,
+        password: senha.value,
+        name: nome.value,
         confirmSenha: confirmSenha.value
     }
     fetch('http://localhost:8000/api/auth/register',{
@@ -23,7 +23,7 @@ function register(){
                 return response.json()
             })
             .then(function(response){
-                localStorage.setItem('token',response.access_token)
+               
             })
 
 }
