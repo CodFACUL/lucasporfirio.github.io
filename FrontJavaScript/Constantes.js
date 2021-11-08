@@ -4,7 +4,8 @@ MSG.innerHTML='<p>Preencha corretamente todos os campos</p>';
 
 const headers = {
     "Content-Type": "application/json",                                                                                                
-    "Access-Control-Origin": "*"
+    "Access-Control-Origin": "*",
+    'Authorization': 'Bearer '+localStorage.getItem('token')
  }
 const tabela       = document.getElementById('tabela');
 const titulobanner = document.getElementById('titulo-banner');
