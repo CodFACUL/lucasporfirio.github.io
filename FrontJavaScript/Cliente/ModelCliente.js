@@ -7,7 +7,7 @@ class ModelCliente{
         let dados= {
                 cnpj_cli: cnpj.value,
                 nome: nome.value,
-                id_vend: vendedor.value
+                id_vend: vendedor.value                
             };
 
         if(dados.cnpj_cli.length==18 && dados.nome!=''){
