@@ -21,6 +21,7 @@ function login(){
                 return response.json()
             })
             .then(function(response){
-                localStorage.setItem('token',response.access_token)
+                localStorage.setItem('token',response.access_token);
+                window.location.replace('file:///C:/xampp/htdocs/lucasporfirio.github.io/FrontJavaScript/Maquinas/Maquinas.html');
             })
     }

@@ -32,6 +32,7 @@ class ViewMaquina{
       })
       .then(function(response){
           response.forEach((user) => {
+            console.log(user)
           let tbody = document.getElementById('tbody');
           let tr = document.createElement('tr');
           tr.innerHTML=`<td>
@@ -43,7 +44,7 @@ class ViewMaquina{
                           <td>`+user.voltagem+`</td>
                           <td>`+user.amperagem+`</td>
                           <td>`+user.peso+`</td>
-                          <td></td>
+                          <td>`+user.cliente_nome+`</td>
                           <td>
                               <i onclick="criaVisualizar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi  bi-search"></i>
                               <i onclick="criaAlterar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-pencil"></i>
