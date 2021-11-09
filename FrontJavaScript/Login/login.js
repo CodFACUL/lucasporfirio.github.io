@@ -22,6 +22,6 @@ function login(){
             })
             .then(function(response){
                 localStorage.setItem('token',response.access_token);
-                window.location.replace('file:///C:/xampp/htdocs/lucasporfirio.github.io/FrontJavaScript/Maquinas/Maquinas.html');
+                window.location.replace('file:///C:/xampp/htdocs/lucasporfirio.github.io/FrontJavaScript/Maquina/Maquina.html');
             })
     }
