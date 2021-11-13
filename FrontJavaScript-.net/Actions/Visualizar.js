@@ -18,12 +18,9 @@ class Visualizar{
 
 
     static viewAjax(id,modulo,disabled=false){
-        fetch(`http://127.0.0.1:8000/api/`+modulo+`/`+id,{
+        fetch(`https://localhost:44375/`+modulo+`/`+id,{
                 method: 'GET',
                 headers: headers,
-            })
-            .then(function(response){
-                return response.json()
             })
             .then(function(response){
                 function desabilitado(Campos){
@@ -34,13 +31,13 @@ class Visualizar{
                     }
                 }
                 switch(modulo){
-                    case 'vendedor':
+                    case 'Vendedor':
                         const CamposVend = ViewVendedor.camposVendedor();
                         desabilitado(CamposVend);
                         CamposVend[0].value = response.nome;
                         CamposVend[1].value = response.cnpj_vend;
                         break;
-                    case 'cliente':
+                    case 'Cliente':
                         const CamposCli = ViewCliente.camposCliente();
                         desabilitado(CamposCli);
                         console.log(response)
@@ -48,7 +45,7 @@ class Visualizar{
                         CamposCli[1].value = response.cnpj_cli;
                         CamposCli[2].value = response.vendedor_nome;
                         break;
-                    case 'maquina':
+                    case 'Maquina':
                         const CamposMaq = ViewMaquina.camposMaquina();
                         desabilitado(CamposMaq);
                         CamposMaq[0].value = response.modelo;

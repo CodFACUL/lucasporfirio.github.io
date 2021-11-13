@@ -1,22 +1,22 @@
 function criaDeletar(id){
-    del.modalDeletar(id,'cliente');
+    del.modalDeletar(id,'Cliente');
   }
   function confirmaDel(){
     del.deletar();
   }
   function criaAlterar(id){
-    alt.modalAlterar(id,'cliente');
+    alt.modalAlterar(id,'Cliente');
   }
   function confirmaAlt(){
     alt.putDados();
   }
   function criaVisualizar(id){
-    vis.modalVisualizar(id,'cliente');
+    vis.modalVisualizar(id,'Cliente');
   }
   function criaIncluir(){
-    inc.modalIncluir('cliente');
+    inc.modalIncluir('Cliente');
   }
   function confirmaPost(){
     inc.postDados();
   }
-  Listar.dados('vendedor');
+  Listar.dados('Vendedor');

@@ -26,7 +26,7 @@ class ViewMaquina{
   }
 
   body(){
-      fetch('http://127.0.0.1:8000/api/maquina')
+      fetch('https://localhost:44375/Maquina')
       .then(function(response){
           return response.json()
       })

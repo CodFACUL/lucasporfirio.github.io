@@ -24,7 +24,7 @@ class ViewCliente{
     }
 
     body(){
-        fetch('http://127.0.0.1:8000/api/cliente')
+        fetch('https://localhost:44375/Cliente')
         .then(function(response){
             return response.json()
         })

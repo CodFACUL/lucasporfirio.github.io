@@ -22,7 +22,7 @@ class ViewVendedor{
     }
 
     body(){
-        fetch('http://127.0.0.1:8000/api/vendedor')
+        fetch('https://localhost:44375/Vendedor')
         .then(function(response){
             return response.json()
         })
@@ -35,7 +35,7 @@ class ViewVendedor{
                             </td>
                             <td>`+user.id+`</td>
                             <td class="col-3"><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">`+user.nome+`</div></td>
-                            <td>`+user.cnpj_vend+`</td>
+                            <td>`+user.cnpj_Vend+`</td>
                             <td>
                                 <i onclick="criaVisualizar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi  bi-search"></i>
                                 <i onclick="criaAlterar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-pencil"></i>

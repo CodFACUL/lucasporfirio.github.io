@@ -1,22 +1,22 @@
 function criaDeletar(id){
-    del.modalDeletar(id,'maquina');
+    del.modalDeletar(id,'Maquina');
   }
   function confirmaDel(){
     del.deletar();
   }
   function criaAlterar(id){
-    alt.modalAlterar(id,'maquina');
+    alt.modalAlterar(id,'Maquina');
   }
   function confirmaAlt(){
     alt.putDados();
   }
   function criaVisualizar(id){
-    vis.modalVisualizar(id,'maquina');
+    vis.modalVisualizar(id,'Maquina');
   }
   function criaIncluir(){
-    inc.modalIncluir('maquina');
+    inc.modalIncluir('Maquina');
   }
   function confirmaPost(){
     inc.postDados();
   }
-  Listar.dados('cliente');
+  Listar.dados('Cliente');

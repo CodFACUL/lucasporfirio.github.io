@@ -1,22 +1,22 @@
 function criaDeletar(id){
-    del.modalDeletar(id,'lamina');
+    del.modalDeletar(id,'Lamina');
   }
   function confirmaDel(){
     del.deletar();
   }
   function criaAlterar(id){
-    alt.modalAlterar(id,'lamina');
+    alt.modalAlterar(id,'Lamina');
   }
   function confirmaAlt(){
     alt.putDados();
   }
   function criaVisualizar(id){
-    vis.modalVisualizar(id,'lamina');
+    vis.modalVisualizar(id,'Lamina');
   }
   function criaIncluir(){
-    inc.modalIncluir('lamina');
+    inc.modalIncluir('Lamina');
   }
   function confirmaPost(){
     inc.postDados();
   }
-  Listar.dados('maquina');
+  Listar.dados('Maquina');

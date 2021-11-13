@@ -1,20 +1,20 @@
 function criaDeletar(id){
-    del.modalDeletar(id,'vendedor');
+    del.modalDeletar(id,'Vendedor');
   }
   function confirmaDel(){
     del.deletar();
   }
   function criaAlterar(id){
-    alt.modalAlterar(id,'vendedor');
+    alt.modalAlterar(id,'Vendedor');
   }
   function confirmaAlt(){
     alt.putDados();
   }
   function criaVisualizar(id){
-    vis.modalVisualizar(id,'vendedor');
+    vis.modalVisualizar(id,'Vendedor');
   }
   function criaIncluir(){
-    inc.modalIncluir('vendedor');
+    inc.modalIncluir('Vendedor');
   }
   function confirmaPost(){
     inc.postDados();

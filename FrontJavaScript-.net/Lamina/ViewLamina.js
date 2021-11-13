@@ -24,7 +24,7 @@ class ViewLamina{
     }
 
     body(){
-        fetch('http://127.0.0.1:8000/api/lamina')
+        fetch('https://localhost:44375/Lamina')
         .then(function(response){
             return response.json()
         })
@@ -52,8 +52,8 @@ class ViewLamina{
 
     static camposLamina(){
         mbody.innerHTML=`<div class="input-group mb-3">
-                                <label for="amperagem" class="input-group-text">Amperagem</label>
-                                <select id="amperagem" class="form-select">
+                                <label for="modelo" class="input-group-text">Lamina</label>
+                                <select id="modelo" class="form-select">
                                 <option value="Lisa">Lisa</option>
                                 <option value="Serrilhada">Serrilhada</option>
                                 <option value="Curva">Curva</option>

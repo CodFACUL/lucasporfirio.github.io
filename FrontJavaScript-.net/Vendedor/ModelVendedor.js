@@ -4,11 +4,11 @@ class ModelVendedor{
         let cnpj = document.getElementById('cnpj');
 
         let dados= {
-                cnpj_vend: cnpj.value,
+                cnpj_Vend: cnpj.value,
                 nome: nome.value
             };
 
-        if(dados.cnpj_vend.length==18 && dados.nome!=''){
+        if(dados.cnpj_Vend.length==18 && dados.nome!=''){
             return dados;
         }else{
             document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSG);

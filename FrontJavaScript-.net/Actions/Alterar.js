@@ -39,7 +39,7 @@ class Alterar{
         if(!id){
             id= check[0]
         }
-        fetch('http://127.0.0.1:8000/api/'+nome+'/'+id,{
+        fetch('https://localhost:44375/'+nome+'/'+id,{
                 method: 'PUT',
                 headers: headers,
                 body: JSON.stringify(dados)

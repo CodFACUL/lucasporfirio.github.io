@@ -50,14 +50,17 @@ function modalSucesso(tipo,nome){
     let mbody = document.getElementById('modal-body');
     mbody.innerHTML= '<p>'+nome+' '+tipo+' com sucesso!</p>';
     switch (nome){
-        case 'vendedor':
+        case 'Vendedor':
             mfooter.innerHTML=`<button type="button" onclick="ViewVendedor.atualizaDados()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
             break;
-        case 'cliente':
+        case 'Cliente':
             mfooter.innerHTML=`<button type="button" onclick="ViewCliente.atualizaDados()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
             break;
-        case 'maquina':
+        case 'Maquina':
             mfooter.innerHTML=`<button type="button" onclick="ViewMaquina.atualizaDados()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
+            break;
+        case 'Lamina':
+            mfooter.innerHTML=`<button type="button" onclick="ViewLamina.atualizaDados()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
             break;
     }
     modal.show();

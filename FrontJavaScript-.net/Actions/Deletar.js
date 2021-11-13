@@ -27,7 +27,7 @@ class Deletar{
     }
 
     deleteAjax(id,modulo=this.modulo){
-        fetch(`http://127.0.0.1:8000/api/`+modulo+`/`+id,{
+        fetch(`https://localhost:44375/`+modulo+`/`+id,{
                 method: 'DELETE',
                 headers: headers,
             })

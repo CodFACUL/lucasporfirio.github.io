@@ -1,7 +1,7 @@
 class Listar{
 
     static dados(modulo){
-        fetch('http://127.0.0.1:8000/api/'+modulo)
+       fetch('https://localhost:44375/'+modulo)
         .then(function(response){
             return response.json()
         })

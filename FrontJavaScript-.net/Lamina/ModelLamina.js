@@ -1,16 +1,16 @@
-class ModelCliente{
-    static dadosCliente(){
-        let nome    = document.getElementById('nome');
-        let cnpj    = document.getElementById('cnpj');
-        let maquina = document.getElementById('vendedor');
+class ModelLamina{
+    static dadosLamina(){
+        let nome    = document.getElementById('modelo');
+        let valor    = document.getElementById('valor');
+        let maquina = document.getElementById('maquina');
 
         let dados= {
-                cnpj_cli: cnpj.value,
-                nome: nome.value,
+                valor: valor.value,
+                modelo: nome.value,
                 maquinaId: maquina.value                
             };
 
-        if(dados.cnpj_cli.length==18 && dados.nome!='' && dados.maquinaId!=''){
+        if(dados){
             return dados;
         }else{
             document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSG);
