@@ -76,8 +76,8 @@ class ViewLamina{
             maquina.appendChild(option);
         }
 
-        const valor     = document.getElementById('valor');
-        const modelo     = document.getElementById('modelo');
+        const valor  = document.getElementById('valor');
+        const modelo = document.getElementById('modelo');
 
         return [valor,modelo,maquina];
     }

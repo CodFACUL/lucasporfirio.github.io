@@ -13,9 +13,9 @@ class ModelMaquina{
                 voltagem: voltagem.value,
                 amperagem: amperagem.value,
                 peso: peso.value,
-                id_cli: cliente.value
+                clienteId: cliente.value
             };
-        if(dados.id_cli!=''){
+        if(dados.clienteId!=''){
             return dados;
         }else{
             document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSG);

@@ -22,13 +22,13 @@ class Alterar{
 
     putDados(){
         switch(this.modulo){
-            case 'vendedor':
+            case 'Vendedor':
                 this.putAjax(ModelVendedor.dadosVendedor(),this.modulo,this.id);
                 break;
-            case 'cliente':
+            case 'Cliente':
                 this.putAjax(ModelCliente.dadosCliente(),this.modulo,this.id);
                 break;
-            case 'maquina':
+            case 'Maquina':
                 this.putAjax(ModelMaquina.dadosMaquina(),this.modulo,this.id);
                 break;
         }
@@ -43,9 +43,6 @@ class Alterar{
                 method: 'PUT',
                 headers: headers,
                 body: JSON.stringify(dados)
-            })
-            .then(function(response){
-                return response.json()
             })
             .then(function(response){     
                 modalSucesso('alterado',nome);
