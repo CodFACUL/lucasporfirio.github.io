@@ -61,7 +61,7 @@ class ViewLamina{
                             </div>
                             <div class="input-group mb-3">
                                 <label for="valor" class="input-group-text">Valor R$</label>
-                                <input type="text"  id="valor" required name="valor" class="form-control">
+                                <input type="number"  id="valor" required name="valor" class="form-control">
                             </div>
                             <div class="input-group mb-3">
                                 <label for="maquina" class="input-group-text">Maquina</label>

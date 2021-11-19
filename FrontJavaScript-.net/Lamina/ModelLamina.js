@@ -10,7 +10,7 @@ class ModelLamina{
                 maquinaId: maquina.value                
             };
 
-        if(dados){
+        if(dados.valor!='' && dados.valor.length<20){
             return dados;
         }else{
             document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSG);
