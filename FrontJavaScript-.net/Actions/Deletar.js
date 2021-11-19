@@ -32,7 +32,12 @@ class Deletar{
                 headers: headers,
             })
             .then(function(response){
-                modalSucesso('excluído',modulo);
+                if(response.ok){
+                    modalSucesso('excluído',modulo);
+                }else{
+                    document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSGERROR);
+                }
+                
             })    
     }
 }

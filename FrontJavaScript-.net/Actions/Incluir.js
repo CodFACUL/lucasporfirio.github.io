@@ -47,7 +47,7 @@ class Incluir{
                 if(response.ok){
                     modalSucesso('incluido',nome)
                 }else{
-                    document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSG);
+                    document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSGERROR);
                 }                  
             })
     }

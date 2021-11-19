@@ -1,7 +1,9 @@
 const MSG = document.createElement('div');
+const MSGERROR = document.createElement('div');
 MSG.setAttribute('class','alert alert-danger');
+MSGERROR.setAttribute('class','alert alert-danger');
 MSG.innerHTML='<p>Preencha corretamente todos os campos</p>';
-
+MSGERROR.innerHTML='<p>Erro no banco de dados, tente novamente!</p>';
 const headers = {
     "Content-Type": "application/json",                                                                                                
     "Access-Control-Origin": "*"

@@ -31,6 +31,9 @@ class Alterar{
             case 'Maquina':
                 this.putAjax(ModelMaquina.dadosMaquina(),this.modulo,this.id);
                 break;
+            case 'Lamina':
+                this.putAjax(ModelLamina.dadosLamina(),this.modulo,this.id);
+                break;
         }
         
     }
@@ -44,8 +47,12 @@ class Alterar{
                 headers: headers,
                 body: JSON.stringify(dados)
             })
-            .then(function(response){     
-                modalSucesso('alterado',nome);
+            .then(function(response){   
+                if(response.ok){
+                    modalSucesso('alterado',nome);
+                } else{
+                    document.getElementById('modal-body').insertAdjacentElement('afterbegin', MSGERROR);
+                }          
             })
     }
 }
