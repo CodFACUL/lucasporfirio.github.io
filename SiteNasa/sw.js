@@ -4,12 +4,13 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/styles.css',
-        '/app.js',
-        '/manifest.js',
-        '/vendor.js',
+        '/lucasporfirio.github.io/SiteNasa',
+        '/lucasporfirio.github.io/SiteNasa/index.html',
+        '/lucasporfirio.github.io/SiteNasa/missoes.html',
+        '/lucasporfirio.github.io/SiteNasa/naves.html',
+        '/lucasporfirio.github.io/SiteNasa/manifest.json',
+        '/lucasporfirio.github.io/SiteNasa/trabalhos_desenvolvidos.html',
+        '/lucasporfirio.github.io/SiteNasa/imagens/nasa_144.png'
       ]);
     })
   )

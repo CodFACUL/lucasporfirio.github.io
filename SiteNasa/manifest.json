@@ -4,12 +4,12 @@
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
+
+    "start_url": "/lucasporfirio.github.io/SiteNasa/index.html",
     "icons": [
         {
-          "src": "https://img.icons8.com/color/50/000000/nasa.png",
-          "sizes": "72x72",
+          "src": "/lucasporfirio.github.io/SiteNasa/imagens/nasa_144.png",
+          "sizes": "144x144",
           "type": "image/png"
         }
       ]
