@@ -63,3 +63,30 @@ function modalSucesso(tipo,nome){
     }
     modal.show();
 }
+
+function modalErro(tipo,nome){
+    let myModalEl = document.getElementById('staticBackdrop');
+    let modal = bootstrap.Modal.getInstance(myModalEl);
+    let titulo_modal= document.getElementById('titulo-modal');
+    titulo_modal.innerHTML= titulobanner.textContent;
+    let mbody = document.getElementById('modal-body');
+    mbody.innerHTML= '<p>Erro ao '+tipo+' '+nome+'!</p>';
+    switch (nome){
+        case 'vendedor':
+            mfooter.innerHTML=`<button type="button" onclick="ViewVendedor.atualizaDados()" onclick="resetModal()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
+            break;
+        case 'cliente':
+            mfooter.innerHTML=`<button type="button" onclick="ViewCliente.atualizaDados()" onclick="resetModal()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
+            break;
+        case 'maquina':
+            mfooter.innerHTML=`<button type="button" onclick="ViewMaquina.atualizaDados()" onclick="resetModal()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>`;
+            break;
+    }
+    modal.show();
+}
+
+function resetModal(){
+    document.getElementById('modal-body').innerHTML = '';
+    document.getElementById('titulo-modal').innerHTML = '';
+    mfooter.innerHTML = '';
+}

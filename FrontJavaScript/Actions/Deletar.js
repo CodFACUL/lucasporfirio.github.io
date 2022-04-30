@@ -31,8 +31,12 @@ class Deletar{
                 method: 'DELETE',
                 headers: headers,
             })
-            .then(function(response){
-                modalSucesso('excluído',modulo);
+            .then(function(response){debugger;
+                if(response.status == 200){
+                    modalSucesso('excluído',modulo);
+                }else{
+                    modalErro('excluir', modulo);
+                }
             })    
     }
 }

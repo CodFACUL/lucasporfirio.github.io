@@ -10,13 +10,13 @@ class ViewMaquina{
           <tr>
               <th></th>
               <th>Código</th>
-              <th class="col-3">Modelo</th>
+              <th class="col-1">Modelo</th>
               <th class="col-1">Fases</th>
               <th class="col-1">Voltagem</th>
               <th class="col-1">Amperagem</th>
               <th class="col-1">Peso</th>
-              <th style="width:200px">Cliente</th>
-              <th class="col-1">Ações</th>
+              <th width="300px">Cliente</th>
+              <th width="150px">Ações</th>
           </tr>
         </thead>
         <tbody  id="tbody" class="table-white bg-white text-dark"> 
@@ -32,21 +32,21 @@ class ViewMaquina{
       })
       .then(function(response){
           response.forEach((user) => {
-            console.log(user)
           let tbody = document.getElementById('tbody');
           let tr = document.createElement('tr');
           tr.innerHTML=`<td>
                               <input class="form-check" type="checkbox" onclick="rowSelected(event)" name="row" id="`+user.id+`" >
                           </td>
                           <td>`+user.id+`</td>
-                          <td class="col-3"><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">`+user.modelo+`</div></td>
+                          <td><div class="d-inline-block text-truncate" style="margin-left:-0.5rem; margin-right:-0.5rem; width: 200px;">`+user.modelo+`</div></td>
                           <td>`+user.fases+`</td>
-                          <td>`+user.voltagem+`</td>
-                          <td>`+user.amperagem+`</td>
-                          <td>`+user.peso+`</td>
+                          <td>`+user.voltagem+` V</td>
+                          <td>`+user.amperagem+` A</td>
+                          <td>`+user.peso+` Kg</td>
                           <td>`+user.cliente_nome+`</td>
                           <td>
-                              <i onclick="criaVisualizar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi  bi-search"></i>
+                              <i  data-bs-toggle="modal" data-bs-target="#staticBackdrop"class="bi bi-graph-up"></i>
+                              <i onclick="criaVisualizar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bi ms-3 bi-search"></i>
                               <i onclick="criaAlterar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-pencil"></i>
                               <i onclick="criaDeletar('`+user.id+`')" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="bi ms-3 bi-trash"></i>
                           </td>` 
